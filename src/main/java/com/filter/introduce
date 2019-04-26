@@ -1,0 +1,26 @@
+Java过滤器模式(条件模式)
+滤器模式或条件模式是一种设计模式，使开发人员可以使用不同的条件过滤一组对象，并通过逻辑操作以解耦方式将其链接。 这种类型的设计模式属于结构模式，因为该模式组合多个标准以获得单个标准。
+
+实例
+我们将创建一个Person对象，Criteria接口和具体类，实现这个接口来过滤Person对象的列表。CriteriaPatternDemo是一个演示类，使用Criteria对象基于各种标准及其组合过滤拥有Person对象的列表（List)。
+
+
+第1步
+创建要应用标准的类。
+	Person.java
+	
+第2步
+创建Criteria的接口。
+	Criteria.java
+	
+第3步
+创建实现Criteria接口的具体类。
+	CriteriaMale.java
+	CriteriaFemale.java
+	CriteriaSingle.java
+	AndCriteria.java
+	OrCriteria.java
+	
+第4步
+使用不同的条件及其组合过滤掉人。
+	CriteriaPatternDemo.java

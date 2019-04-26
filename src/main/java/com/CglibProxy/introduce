@@ -1,0 +1,12 @@
+Cglib代理方法：目标类和代理类均不需要实现接口
+
+第一步
+	创建目标方法：UserDaoImpl
+
+第二步
+	创建代理工厂：ProxyFactory
+	
+第三步
+	创建测试类：App
+	
+注意：要导入cglib.jar包

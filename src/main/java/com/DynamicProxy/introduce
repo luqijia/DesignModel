@@ -1,0 +1,13 @@
+动态代理模式：代理类无需实现接口，目标类要实现接口
+
+第一步：
+	创建接口：UserDao.java
+
+第二步
+	创建目标类：UserDaoImpl.java
+
+第三步
+	创建代理类：ProxyFactory.java
+	
+第四步
+	创建测试类：App.java

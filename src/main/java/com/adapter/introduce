@@ -1,0 +1,39 @@
+Java适配器模式
+适配器模式作为两个不兼容接口之间的桥梁。 这种类型的设计模式属于结构模式，因为该模式组合了两个独立接口。
+
+这种模式涉及一个单独的类，它负责连接独立或不兼容接口的功能。 现实生活的例子- 读卡器的，其用作为存储卡和笔记本电脑之间的适配器。将存储卡插入读卡器并将读卡器插入笔记本电脑接口，以便可以通过笔记本电脑读取存储卡。
+
+我们通过以下示例演示适配器模式的使用。音频播放器设备只能播放mp3文件，但希望能够实现一个可播放vlc和mp4文件的高级音频播放器。
+
+实例
+有一个MediaPlayer接口和一个具体的类-AudioPlayer它实现了MediaPlayer接口。 默认情况下，音频播放器（AudioPlayer ）可以播放mp3格式的音频文件。
+
+还有另一个接口AdvancedMediaPlayer 和实现AdvancedMediaPlayer 接口的具体类。 这些类可以播放vlc和mp4格式的文件。
+
+想让AudioPlayer播放其他格式。要实现这一点，需要创建了一个适配器类MediaAdapter，它实现了MediaPlayer接口并使用AdvancedMediaPlayer对象来播放所需的格式。
+
+AudioPlayer使用适配器类MediaAdapter传递它所需的音频类型，而不知道可以播放所需格式的实际类。 AdapterPatternDemo这是一个演示类，它将使用AudioPlayer类来播放各种格式。
+
+实现结构如下图所示
+
+第1步
+分别创建媒体播放器和高级媒体播放器接口。代码如下所示
+	MediaPlayer.java
+	AdvancedMediaPlayer.java
+	
+第2步
+创建实现AdvancedMediaPlayer接口的具体类。
+	VlcPlayer.java
+	Mp4Player.java
+
+第3步
+创建实现MediaPlayer接口的适配器类。
+	MediaAdapter.java
+	
+第4步
+创建一个实现MediaPlayer接口的具体类。
+	AudioPlayer.java
+	
+第5步
+使用AudioPlayer播放不同类型的音频格式。
+	AdapterPatternDemo.java

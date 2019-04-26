@@ -1,0 +1,16 @@
+第1步
+创建一个接口-Shape.java
+
+第2步
+创建实现相同接口的具体类。如下所示几个类
+ 1.Rectangle.java
+ 2.Square.java
+ 3.Circle.java
+ 
+ 第3步
+创建工厂根据给定的信息生成具体类的对象。
+	ShapeFactory.java
+	
+第4步
+使用工厂通过传递类型等信息来获取具体类的对象。
+	FactoryPatternDemo.java

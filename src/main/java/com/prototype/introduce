@@ -1,0 +1,25 @@
+原型模式指在创建重复对象的同时保持性能。 这种类型的设计模式属于创建模式，因为此模式提供了创建对象的最佳方法之一。
+这个模式涉及实现一个原型接口，它只创建当前对象的克隆。有时直接创建对象时使用这种模式是昂贵的。例如，在昂贵的数据库操作之后创建对象。因此我们可以缓存对象，在下一个请求时返回其克隆，并在需要时更新数据库，从而减少数据库调用。
+
+实例
+我们将创建一个抽象类Shape和扩展Shape类的具体类。 在下一步中定义ShapeCache类，在Hashtable中存储形状（Shape）对象，并在请求时返回其克隆。
+
+PrototypPatternDemo这是一个演示类，将使用ShapeCache类来获取一个Shape对象。实现结构图如下所示 -
+
+第1步
+创建一个实现Clonable接口的抽象类。
+	Shape.java
+	
+第2步
+创建扩展上述类的具体类。
+	Rectangle.java
+	Square.java
+	Circle.java
+	
+第3步
+创建一个类来获取具体的类，并将它们存储在Hashtable中。
+	ShapeCache.java
+	
+第4步
+PrototypePatternDemo使用ShapeCache类来获取存储在Hashtable中的形状（shape）的克隆。
+	PrototypePatternDemo.java

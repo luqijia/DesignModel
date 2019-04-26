@@ -1,0 +1,26 @@
+Java策略模式
+在策略模式中，可以在运行时更改类行为或其算法。 这种类型的设计模式属于行为模式。
+
+在策略模式中，创建表示各种策略对象和其行为根据其策略对象而变化的上下文对象。 策略对象更改上下文对象的执行算法。
+
+实例
+在这个示例中，将创建一个 Strategy 接口，定义实现策略接口的操作和具体策略类。 上下文类- Context 是使用策略的类。
+
+StrategyPatternDemo是一个演示类，将使用上下文- Context 和策略对象来演示上下文行为基于其部署或使用的策略的变化。
+
+
+第1步
+创建一个类接口，其代码如下
+	Strategy.java
+	
+第2步
+创建三个实现相同接口的具体类。其代码分别如下
+	OperationAdd.java
+	OperationSubstract.java
+	OperationMultiply.java
+	创建上下文（Context ）类，其代码如下
+		Context.java
+		
+第3步
+使用上下文- Context 在更改其策略时查看行为更改。
+	StrategyPatternDemo.java
